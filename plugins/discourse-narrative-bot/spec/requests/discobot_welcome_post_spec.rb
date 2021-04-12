@@ -38,7 +38,8 @@ describe "Discobot welcome post" do
           put "/invites/show/#{invite.invite_key}.json", params: {
             username: 'somename',
             name: 'testing',
-            password: 'asodaasdaosdhq'
+            password: 'asodaasdaosdhq',
+            email_token: invite.email
           }
         end.to change { User.count }.by(1)
 
