@@ -162,26 +162,6 @@
                            editing=editingTitle}}
   </div>
 
-  <div class="display-row last-ip">
-    <div class="field">{{i18n "user.ip_address.title"}}</div>
-    <div class="value">{{model.ip_address}}</div>
-    <div class="controls">
-      {{#if currentUser.staff}}
-        {{ip-lookup ip=model.ip_address userId=model.id}}
-      {{/if}}
-    </div>
-  </div>
-
-  <div class="display-row registration-ip">
-    <div class="field">{{i18n "user.registration_ip_address.title"}}</div>
-    <div class="value">{{model.registration_ip_address}}</div>
-    <div class="controls">
-      {{#if currentUser.staff}}
-        {{ip-lookup ip=model.registration_ip_address userId=model.id}}
-      {{/if}}
-    </div>
-  </div>
-
   {{#if showBadges}}
     <div class="display-row">
       <div class="field">{{i18n "admin.badges.title"}}</div>
